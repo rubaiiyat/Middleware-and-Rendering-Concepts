@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 type Blogs = {
   id: number;
   title: string;
@@ -26,7 +28,9 @@ const Blog = async () => {
               are title and actions parts
             </p>
             <div className="card-actions justify-end">
-              <button className="btn bg-base-300">Read More</button>
+              <Link href={`/blogs/${blog.id}`}>
+                <button className="btn bg-base-300">Read More</button>
+              </Link>
             </div>
           </div>
         </div>
